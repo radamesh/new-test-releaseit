@@ -1,0 +1,17 @@
+{
+  "git": {
+    "requireBranch": "main",
+    "commitMessage": "chore: release v${version}"
+  },
+  "hooks": {
+    "before:init": ["git fetch -p"],
+    "afiter:bump": "npx auto-chengelog -p"
+  },
+  "github": {
+    "release": true,
+    "skipChecks": true
+  },
+  "npm": {
+    "publish": false
+  }
+}
